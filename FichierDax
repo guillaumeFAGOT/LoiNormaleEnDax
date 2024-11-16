@@ -1,0 +1,7 @@
+LoiNormale = 
+VAR x = 'Table 2'[Value]
+VAR moyenne = 17  // Remplacez par votre moyenne
+VAR ecart_type = 1  // Remplacez par votre écart-type
+RETURN (1 / (ecart_type * SQRT(2 * PI()))) * EXP(-((x - moyenne)^2) / (2 * ecart_type^2))
+
+NB Il faut avoir utiliser un GENERATE SERIES POUR CREER LA PREMIERE COLONNE  'Table 2'[Value] DE LA TABLE
